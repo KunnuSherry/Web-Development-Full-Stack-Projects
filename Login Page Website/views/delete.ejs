@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style6.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="details">
+                <div class="text">
+                    <div class="sutext">
+                        Permanently Delete Account...
+                    </div>
+                    <div class="othertext">
+                        Write your Password...
+                    </div>
+                </div>
+                <form action='/delete/<%=user._id%>' method="post">
+                    <input type="email" placeholder="Email" name="email" value="<%=user.email%>">
+                    <input type="password" placeholder="Password" name="password" >
+                    <input type="submit" class="signup signup1" value="Log Out">
+                </form>
+            </div>
+            <div class="image">
+                <img src="/images/Hero.png" alt="image">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

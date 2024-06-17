@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: white;
+        }
+        a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: red;
+}
+
+a:hover {
+    color: white;
+}
+.title {
+    display: block;
+    margin-top: 10px;
+    width: 20%;
+    height: 20px;
+    border: none;
+    background-color: #202020;
+    padding: 15px;
+
+}
+form{
+    margin-top: 20px;
+}
+.submit {
+    display: block;
+    height: 52px;
+    width: 96px;
+    border-radius: 7px;
+    background-color: red;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+::placeholder {
+    color: white;
+}
+
+.submit:hover {
+    color: white;
+    background-color: #202020;
+}
+    </style>
+</head>
+<body bgcolor="black">
+    <a href="/">Go Back...</a>
+    <form action="/rename" class="input" method="post">
+        <input type="text" class="title" placeholder="Previous Title" name="old" value="<%=filename%>">
+        <input type="text" class="title" placeholder="Enter New Title" name="new">
+        <input type="submit" class="submit" value="Rename">
+    </form>
+</body>
+</html>

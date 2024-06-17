@@ -1,0 +1,121 @@
+* {
+    color: black;
+    font-family: "Nunito", sans-serif;    
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cname a {
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.other {
+    display: flex;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.login {
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 30px;
+    width: 65px;
+    border-radius: 4px;
+}
+
+.signup {
+    background-color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 31px;
+    width: 75px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+
+.content {
+    margin-top: 30px;
+    width: 99vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sutext{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.othertext{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+input{
+    width: 230px;
+    height: 25px;
+    border: 2px solid #070707;
+    border-radius: 4px;
+    font-size: 10px;
+    padding-left: 8px;
+}
+
+input::placeholder{
+    color: #070707;
+    font-weight: 500;
+}
+
+img{
+    width: 244px;
+    height: 295px;
+}
+
+.signup1{
+    width: 100px;
+    font-size: 14px;
+}
+
+a:hover{
+    color: red;
+}
