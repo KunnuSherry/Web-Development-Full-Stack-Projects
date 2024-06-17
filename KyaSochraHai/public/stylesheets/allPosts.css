@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-around;
+    background-color:black ;
+}
+.textNav{
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+.profile a img{
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    margin-top: 20px;
+    border: 1px solid white;
+}
+.signup{
+    width: 90px;
+    height: 30px;
+    background-color:black; 
+    border: none;
+}
+.signup a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.posts{
+    color: white;
+    display: flex;
+    /* border: 2px solid white; */
+    height: 100%;
+    width: 70vw;
+    margin-top: 100px;
+    align-self: center;
+    gap: 40px;
+    flex-direction: column;
+}
+.Posts{
+    color :white;
+    display: flex;
+    /* margin-left: 20px; */
+    flex-direction: column;
+    gap: 7px;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 20px;
+    
+}
+.date{
+    font-size: 14px;
+}
+.write{
+    background-color: #141414;
+    width: 99%;
+    height: 85px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+.buttons button{
+    border-radius: 4px;
+    
+    border: none;
+    height: 25px;
+    width: 80px;
+    background-color: #1D9BF0;
+}
+.buttons button a{
+    
+    color: white;
+    text-decoration: none;
+    
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/login&signup.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="contentLeft">
+                <div class="textLeft">
+                    <div class="txt1 t1">
+                        Kya Chalra Hai !
+                    </div>
+                    <div class="txt2 t2">
+                        3AM Thoughts
+                    </div>
+                </div>
+                <img id="toggle-element" src="./images/cute-dog.gif" alt="">
+                <div class="footer">&copy 3AM.inc</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="content">
+                <div class="head">
+                    <img src="./images/logo.png" alt="">
+                    <div class="ha">
+                        New User ? <a href="/signup" class="signup">Sign Up</a>
+                    </div>
+
+                </div>
+                <div class="text">
+                    <div class="txt1">Welcome to the world of Thoughts!</div>
+                    <div class="txt2">Enter you details</div>
+
+                </div>
+                <form action="/login" method="post">
+                    <input type="email" placeholder="Write Your Email" name="email">
+                    <input type="password" placeholder="Write Your Password" name="password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle-element').addEventListener('click', function() {
+    document.documentElement.classList.toggle('dark-theme');
+});
+    </script>
+</body>
+
+</html>

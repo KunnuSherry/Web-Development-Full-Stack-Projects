@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/profile.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="allPosts">
+                <a href="/allPosts">All Posts</a>
+            </div>
+            <div class="textNav">
+                Welcome To 3AM
+            </div>
+            <button class="signup">
+                <a href="/signout">
+                    Sign Out
+                </a>
+            </button>
+        </div>
+        <div class="images">
+            <div class="banner">
+                <img src="https://t4.ftcdn.net/jpg/04/92/06/53/360_F_492065380_eSlHdkdNBy6ArNkk5gV0Lme1qhvTosSI.jpg" alt="">
+                <div class="user">Hey ! <%= user.username%></div>
+            </div>
+            <div class="pp">
+                <img src="<%= user.image %>" alt="">
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="posts">
+        <div class="postNow">
+            <div class="text">
+                Write Something...
+            </div>
+            <form action="/post" method="post">
+                <textarea placeholder="What's On Your Mind ?" name="content"></textarea>
+                <button class="post" type="submit" value="Post">Post</button>
+            </form>
+
+        </div>
+        <div class="myPosts">
+            <div class="heading">
+                My Posts...
+            </div>
+            <% if(user.posts.length> 0){ %>
+                <% user.posts.reverse().forEach(function(post){ %>
+                    <div class="Posts">
+                        <div class="date">
+                            <%= post.date %>
+                        </div>
+                        <div class="write">
+                            <%= post.content %>
+                        </div>
+                        <div class="likes">
+                            <%= post.likes.length %> Likes
+                        </div>
+                        <div class="buttons">
+                            
+                            <button><a href="/edit/<%= post._id %>">Edit</a></button>
+
+                        </div>
+
+                    </div>
+                <% }) %>
+
+            <% } %>
+        </div>
+    </div>
+
+</body>
+
+<script>
+</script>
+
+</html>

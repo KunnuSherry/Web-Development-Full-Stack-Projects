@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/allPosts.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="profile">
+                <a href="/profile"><img src="<%= user.image %>" alt=""></a>
+            </div>
+            <div class="textNav">
+                Collection of Thoughts
+            </div>
+            <button class="signup">
+                <a href="/signout">
+                    Sign Out
+                </a>
+            </button>
+        </div>
+    </div>
+    <div class="posts">
+        <% if(users.length>0){ %>
+            <% users.forEach(function(user){ %>
+                <% user.posts.reverse().forEach(function(post){ %>
+                    <div class="Posts">
+                        <div class="username">
+                            @<%= user.username %>
+                        </div>
+                        <div class="date">
+                            <%= post.date %>
+                        </div>
+                        <div class="write">
+                            <%= post.content %>
+                        </div>
+                        <div class="likes">
+                            <%= post.likes.length %> Likes
+                        </div>
+                        <div class="buttons">
+                            <button><a href="/like/<%= post._id %>">Like</a></button>
+                        </div>
+                    </div>
+                <% }) %>
+            <% }) %>
+        <% } %>
+    </div>
+
+</body>
+
+</html>
