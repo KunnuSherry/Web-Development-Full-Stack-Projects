@@ -1,0 +1,45 @@
+body{
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    gap: 20px;
+}
+.heading{
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.details{
+    background-color: #1c1c1c;
+    padding-left: 10px;
+    margin-left: 20px;
+    width: 500px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    /* height: 78px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.username{
+    font-size: 18px;
+    font-weight: 800;
+}
+.cost{
+    font-size: 14px;
+    font-weight: 800;
+}
+.orders{
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+}
+a{
+    color: white;
+    text-decoration: none;
+}

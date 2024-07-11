@@ -1,0 +1,115 @@
+body {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.userorAdmin,
+.loginorSignup {
+  display: flex;
+}
+button {
+  font-size: 20px;
+  background-color: #260704;
+  border: none;
+  color: white;
+  width: 110px;
+  height: 45px;
+  border-radius: 45px;
+  padding: 5px;
+}
+.user,
+.login {
+  background-color: #e55403;
+}
+.admin:hover {
+  background-color: #e55403;
+}
+.signup:hover {
+  background-color: #e55403;
+}
+.content {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #a43205;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-self: center;
+  margin-top: 100px;
+  border-radius: 20px;
+  box-shadow: 12px 14px 13px black;
+}
+img {
+  margin-top: 20px;
+  width: 150px;
+  height: 70px;
+  object-fit: contain;
+  object-position: center;
+}
+form { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+input {
+  width: 20vw;
+  text-align: center;
+  background-color: #a43205;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+input::placeholder {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+}
+.text {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+form button{
+  width: 20vw;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+a{
+color: white;
+text-decoration: none;
+}
+a:hover{
+color: black;
+text-decoration: none;
+}

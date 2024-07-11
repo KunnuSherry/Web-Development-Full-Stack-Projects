@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    gap: 80px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 4px 0px rgba(255, 255, 255, 40%);
+    margin-top: 20px;
+    width: 90vw;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+.text{
+    font-size: 28px;
+    font-weight: 600;
+}
+.status{
+    justify-content: center;
+    display: flex;
+    width: 90vw;
+}
+.pcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.pending{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.prline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.prcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.preparing{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.prtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.otwline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.otwcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.ontheway{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.otwtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.dline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.dcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.deliverd{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.hide{
+    background-color: transparent;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="id">Order Id: <%=order._id%></div>
+            <a href="/userDashboard">Home</a>
+        </div>
+        <div class="text">Order Status</div>
+        <div class="status">
+            <div class="pending">
+                <div class="pcircle">
+                </div>
+                <div class="stext">
+                    Pending
+                </div>
+            </div>
+            <div class="prline hide"></div>
+            <div class="preparing">
+                <div class="prcircle hide">
+                </div>
+                <div class="prtext">
+                    Preparing
+                </div>
+            </div>
+            <div class="otwline hide"></div>
+            <div class="ontheway">
+                <div class="otwcircle hide">
+                </div>
+                <div class="otwtext">
+                    On The Way
+                </div>
+            </div>
+            <div class="dline hide"></div>
+            <div class="deliverd">
+                <div class="dcircle hide">
+                </div>
+                <div class="dtext">
+                    Deliverd
+                </div>
+            </div>
+        </div>
+    </div>
+</body> 
+<script>
+    let prline = document.body.querySelector('.prline')
+    let prcircle = document.body.querySelector('.prcircle')
+    let otwline = document.body.querySelector('.otwline')
+    let otwcircle = document.body.querySelector('.otwcircle')
+    let dline = document.body.querySelector('.dline')
+    let dcircle = document.body.querySelector('.dcircle')
+    
+
+    const orderID = '<%= order._id.toString()%>';
+    async function fetchOrder(){
+        const response = await fetch(`/getOrderStatus/${orderID}`)
+        const order = await response.json();
+        if(order.status ==="preparing"){
+            prline.style.backgroundColor = "greenyellow"
+            prcircle.style.backgroundColor = "greenyellow"
+        }
+        else if(order.status ==="ontheway"){
+            prline.style.backgroundColor = "greenyellow"
+            prcircle.style.backgroundColor = "greenyellow"
+            otwline.style.backgroundColor = "greenyellow"
+            otwcircle.style.backgroundColor = "greenyellow"
+        }
+        else{
+            prline.style.backgroundColor = "greenyellow"
+            prcircle.style.backgroundColor = "greenyellow"
+            otwline.style.backgroundColor = "greenyellow"
+            otwcircle.style.backgroundColor = "greenyellow"
+            dline.style.backgroundColor = "greenyellow"
+            dcircle.style.backgroundColor = "greenyellow"
+        }
+    }
+    setInterval(fetchOrder, 5000);
+ 
+</script>
+</html>

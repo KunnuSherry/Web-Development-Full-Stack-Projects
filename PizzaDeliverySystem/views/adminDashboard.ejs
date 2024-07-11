@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin DashBoard</title>
+    <style>
+      form {
+        margin-top: 20px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input {
+        padding-left: 20px;
+        width: 18.5vw;
+        height: 50px;
+      }
+      select {
+        padding-left: 20px;
+        width: 20vw;
+        height: 50px;
+      }
+      button {
+        width: 20vw;
+        height: 50px;
+        font-family: sans-serif;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <form action="/updateStatus/<%=order._id%>" method="post">
+      <input
+        type="text"
+        name="orderid"
+        id=""
+        placeholder="Enter The OrderId"
+        value="<%= order._id.toString()%>"
+      />
+      <select name="orderstatus" id="orderstatus">
+        <option value="preparing">Preparing</option>
+        <option value="ontheway">On The Way</option>
+        <option value="delivered">Delivered</option>
+      </select>
+      <button type="submit">Update Status</button>
+    </form>
+  </body>
+</html>

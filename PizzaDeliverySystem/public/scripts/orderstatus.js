@@ -1,0 +1,1 @@
+document.body.querySelector('.prline').classList.remove('hide')

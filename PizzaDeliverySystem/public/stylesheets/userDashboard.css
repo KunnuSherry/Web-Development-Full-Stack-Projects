@@ -1,0 +1,90 @@
+*{
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    padding: 4px;
+    box-shadow: 0px 9px 8px 0px rgb(255 255 255 / 50%);
+    margin-top: 20px;
+    width: 80vw;
+}
+.li{
+    font-size: 18px;
+    font-weight: 500;
+}
+.lii{
+    font-size: 24px;
+    font-weight: 500;
+    color: #636363;
+}
+.prePizzas{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    position: absolute;
+    width: 80vw;
+    height: 25vw;
+    margin-top: 5vw;
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: ease-in-out 2s;
+    visibility: hidden;
+    object-fit:cover;
+    object-position: center;
+}
+.text{
+    position: static;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 1vw;
+    color: yellow;
+}
+img.active{
+    visibility: visible;
+}
+.text1{
+    text-align: center;
+    width: 30vw;
+    font-size: 22px;
+    position: absolute;
+    color: greenyellow;
+    visibility:hidden;
+    top: 31vw;
+}
+.text1.active{
+    visibility: visible;
+}
+.custom{
+    display: flex;
+    justify-content: center;
+}
+button{
+    top: 41vw;
+    position: absolute;
+    width: 140px;
+    height: 3vw;
+    background: yellow;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+}
+button:hover{
+    background-color: #636363;
+    color: white;
+}

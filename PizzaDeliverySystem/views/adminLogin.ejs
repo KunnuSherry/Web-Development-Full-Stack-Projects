@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/adminLogin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div class="userorAdmin">
+          <a href="/userSignup"><button class="user">User</button></a>
+          <button class="admin">Admin</button>
+        </div>
+        <div class="loginorSignup">
+          <button class="login">Login</button>
+          <a href="/adminSignup"><button class="signup">Signup</button></a>
+        </div>
+      </div>
+      <div class="content">
+        <img src="./images/pizzaLogo.png" alt="">
+        <div class="text">Welcome Back !</div>
+        <form action="/adminLogin" method="post">
+          <input type="email" placeholder="Write Your Email" name="adminemail">
+          <input type="password" placeholder="Write Your Password" name="adminpassword">
+          <button type="submit">Login</button>
+        </form>
+        <a href="/adminForgetPassword">Forgot Password ?</a>
+      </div>
+    </div>
+  </body>
+</html>

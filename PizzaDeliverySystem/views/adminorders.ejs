@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/adminorders.css" />
+  </head>
+  <body>
+    <div class="heading">Orders for <%= admin.adminusername%></div>
+    <div class="orders">
+        <%orders.forEach((order)=>{%>
+            <a href="/adminDashboard/<%=order._id%>"><div class="details">
+              <div class="username">Username: <%=order.user.username%></div>
+              <div class="ing">
+                Base: <%=order.base%> <br>
+                Cheese: <%=order.cheese%> <br>
+                Sauce: <%=order.sauce%> <br>
+                Veggies: <%order.veggies.forEach((veggie)=>{%>
+                  <%=veggie%> 
+                <%})%> 
+              </div>
+              <div class="cost">Total Cost= ₹<%=order.cost%></div>
+            </div></a>
+            <%})%>
+    </div>
+  </body>
+</html>

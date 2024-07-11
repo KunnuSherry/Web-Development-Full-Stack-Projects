@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>customPizza</title>
+    <link rel="stylesheet" href="./stylesheets/customPizza.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="text">Make Your Your Own Pizza !</div>
+      <form action="/customPizza" method="post">
+        <label for="base">Pizza Base</label>
+        <select name="base" id="base" required>
+          <option value="ClassicThinCrust" data-cost="560">
+            Classic Thin Crust (&#8377;560)
+          </option>
+          <option value="Neapolitan" data-cost="630">
+            Neapolitan (&#8377;630)
+          </option>
+          <option value="TraditionalPan" data-cost="490">
+            Traditional Pan (&#8377;490)
+          </option>
+          <option value="TraditionalPan" data-cost="700">
+            Sicilian (&#8377;700)
+          </option>
+          <option value="NewYorkStyle" data-cost="595">
+            New York Style (&#8377;595)
+          </option>
+        </select>
+        <label for="sauce">Sauce</label>
+        <select name="sauce" id="sauce" required>
+          <option value="TomatoSauce" data-cost="50">
+            Tomato Sauce (&#8377;50)
+          </option>
+          <option value="GarlicParmesanSauce" data-cost="60">
+            Garlic Parmesan Sauce (&#8377;60)
+          </option>
+          <option value="BarbecueSauce" data-cost="55">
+            Barbecue Sauce (&#8377;55)
+          </option>
+          <option value="PestoSauce" data-cost="65">
+            Pesto Sauce (&#8377;65)
+          </option>
+          <option value="AlfredoSauce" data-cost="70">
+            Alfredo Sauce (&#8377;70)
+          </option>
+        </select>
+        <label for="cheese">Cheese</label>
+        <select name="cheese" id="cheese" required>
+          <option value="Mozzarella" data-cost="80">
+            Mozzarella (&#8377;80)
+          </option>
+          <option value="Cheddar" data-cost="90">Cheddar (&#8377;90)</option>
+          <option value="Parmesan" data-cost="85">Parmesan (&#8377;85)</option>
+          <option value="Gouda" data-cost="95">Gouda (&#8377;95)</option>
+        </select>
+        <label for="veggies">Select Veggies:</label>
+        <select name="veggies" id="veggies" multiple required>
+          <option value="tomato" data-cost="10">Tomato (&#8377;10)</option>
+          <option value="onion" data-cost="15">Onion (&#8377;15)</option>
+          <option value="bell-pepper" data-cost="12">Bell Pepper (&#8377;12)</option>
+          <option value="mushroom" data-cost="20">Mushroom (&#8377;20)</option>
+          <option value="olive" data-cost="18">Olive (&#8377;18)</option>
+        </select>
+        <label for="admin">Select DeliveryPartner:</label>
+        <select name="admin" id="admin" required>
+          <%admins.forEach(function (admin) { %>
+            <option value="<%=admin.adminusername%>"><%=admin.adminusername%></option>            
+          <%})%>
+        </select>
+        <button value="submit" id="paybtn">Pay</button>
+      </form>
+    </div>
+  </body>
+  <script src="./scripts/customPizza.js"></script>
+</html>

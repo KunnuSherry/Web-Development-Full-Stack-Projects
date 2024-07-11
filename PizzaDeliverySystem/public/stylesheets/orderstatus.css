@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    gap: 80px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 4px 0px rgba(255, 255, 255, 40%);
+    margin-top: 20px;
+    width: 90vw;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+.text{
+    font-size: 28px;
+    font-weight: 600;
+}
+.status{
+    justify-content: center;
+    display: flex;
+    width: 90vw;
+}
+.pcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.pending{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.prline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.prcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.preparing{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.prtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.otwline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.otwcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.ontheway{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.otwtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.dline{
+    margin-top: 17px;
+    height: 5px;
+    width: 100px;
+    border: 2px solid white;
+    background-color: greenyellow;
+}
+.dcircle{
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+.deliverd{
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dtext{
+    font-size: 18px;
+    font-weight: 500;
+}
+.hide{
+    background-color: transparent;
+}
