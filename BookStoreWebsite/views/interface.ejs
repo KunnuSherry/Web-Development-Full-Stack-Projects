@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioMart-Main</title>
+    <link rel="stylesheet" href="./stylesheets/interface.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="search-container">
+            <input class="search" type="text" placeholder="Search By ISBN, Title">
+            <img src="./images/8666693_search_icon.png" class="search-icon" alt="Search Icon">
+        </div>
+        <span class="imgtop" id="profile-icon"><img src="./images/people_4740890.png" width="30px"></span>
+    </div>
+    <div class="animated-text">
+        <h1>Latest Arrivals.....</h1>
+    </div>
+    <div class="users">
+        <div class="user">
+            <div class="image">
+                <img src="https://img.bookchor.com/images/cover/bc/9780143452126_17199009100.jpg" alt="">
+            </div>
+            <h2>Book Name</h2>
+            <h3>$50</h3>
+        </div>
+        <div class="user">
+            <div class="image">
+                <img src="https://img.bookchor.com/images/cover/bc/9780143442288_17210279960.jpg" alt="">
+            </div>
+            <h2>Book Name</h2>
+            <h3>$50</h3>
+        </div>
+        <%books.forEach((book)=>{%>
+            <div class="user">
+                <div class="image">
+                    <img src="https://img.bookchor.com/images/cover/bc/9780143442288_17210279960.jpg" alt="">
+                </div>
+                <h2><%=book.bookname%></h2>
+                <h3><%=(book.price)/2%></h3>
+            </div>
+        <%})%>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Buy and sell new or used books with ease on our platform. Find the books you've been searching for or
+                    make some extra cash by selling your own.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Email: support@bibliomart.com</li>
+                    <li>Phone: +123 456 7890</li>
+                    <li>Address: New Delhi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 BiblioMart | All rights reserved
+        </div>
+    </footer>
+    <script src="interface.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #200122;
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    background: linear-gradient(to right, #6f0000, #200122);
+
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    font-family: "Play", sans-serif;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.t1 {
+    font-family: "Play", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 40px;
+    color: antiquewhite;
+    font-size: 70px;
+}
+
+.t2 {
+    font-family: "Play", sans-serif;
+    color: antiquewhite;
+    margin-bottom: 30px;
+    font-size: 30px;
+    width: 980px;
+    text-align: center;
+    display: none;
+    
+}
+
+.sec {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    padding: 50px;
+
+
+}
+
+.btnr2 {
+    padding: 15px 60px;
+    font-weight: 900;
+    color: #200122;
+    background-color: wheat;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "Play", sans-serif;
+}
+
+.btnr2:hover {
+    background-color: rgba(0, 0, 0, 0.420);
+    color: rgb(208, 199, 199);
+}
+
+.btnr1 {
+    padding: 15px 50px;
+    font-weight: 900;
+    color: rgb(208, 199, 199);
+    background-color: rgba(0, 0, 0, 0.517);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Play", sans-serif;
+}
+
+.btnr1:hover {
+    color: #6f0000;
+    background-color: wheat;
+}

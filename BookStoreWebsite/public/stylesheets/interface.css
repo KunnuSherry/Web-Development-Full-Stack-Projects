@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playwrite+NL:wght@100..400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto; */
+    font-family: "Play", sans-serif;
+}
+
+body {
+    background: #200122;
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);
+    background: linear-gradient(to right, #6f0000, #200122);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 40%;
+}
+
+.search {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border-color: orange;
+    background-color: bisque;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    height: 100%;
+}
+.search:hover{
+    background-color: beige;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+}
+
+.imgtop {
+    display: flex;
+    align-items: center;
+    color: white;
+    filter: invert();
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.user {
+    width: 240px;
+    padding: 5px;
+    background-color: bisque;
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+}
+
+.user h2 {
+    /* color: whitesmoke; */
+    color: black;
+    font-size: 20px;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.user h3 {
+    /* color: rgb(145, 143, 143); */
+    color: #6f0000;
+}
+
+.image {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #200122;
+    cursor: pointer;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+div>h1 {
+    color: white;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    /* font-family: "Permanent Marker", cursive; */
+    font-family: "Playwrite NL", cursive;
+}
+
+
+.animated-text h1 {
+    display: inline-block;
+    overflow: hidden; /* Ensures that the text does not break out of its container */
+    white-space: nowrap;
+    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.animated-text h1 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
+    border-right: 2px solid blue; /* Adds a caret effect */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: transparent; }
+}
+
+.footer {
+    background: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    padding: 10px;
+    background: #222;
+}
