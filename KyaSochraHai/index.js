@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const userModel = require('./models/users');
 const postModel = require('./models/post');
+const port = 5000;
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -115,4 +116,6 @@ function isLoggedIn(req, res, next) {
 }
 
 
-app.listen(3000);
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
