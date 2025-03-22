@@ -2,11 +2,11 @@
     "version": 2,
     "builds": [
       {
-        "src": "KyaSochraHai/index.js",
+        "src": "/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "KyaSochraHai/index.js" }
+      { "src": "/(.*)", "dest": "/index.js" }
     ]
   }
